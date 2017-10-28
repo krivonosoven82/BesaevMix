@@ -1,0 +1,217 @@
+.header {
+  position: relative;
+  min-height: 100vh;
+  &__container{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1366px;
+    height: 100%;
+    padding: 25px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__lens{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 6px solid $white;
+    &--tl{
+      top: 15px;
+      left: 0;
+      border-right: none;
+      border-bottom: none;
+
+    }
+    &--tr{
+      top: 15px;
+      right: 0;
+      border-left: none;
+      border-bottom: none;
+      z-index: -1;
+    }
+    &--br{
+      bottom: 15px;
+      right: 0;
+      border-left: none;
+      border-top: none;
+    }
+    &--bl{
+      bottom: 15px;
+      left: 0;
+      border-right: none;
+      border-top: none;
+    }
+  }
+  &__head{
+    width: 100%;
+    min-height: 100px;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo{
+    padding: 5px;
+    width: 100%;
+    max-width: 320px;
+    margin-right: 15px;
+  }
+
+  &__nav{
+    padding: 5px
+  }
+  &__link{
+    margin-right: 70px;
+    padding: 4px;
+    font-family: 'Open Sans';
+    color: $white;
+    @include transition(0.5s);
+    cursor: pointer;
+    &:hover{
+      border: 2px solid $blue;
+      border-radius: 8px;
+      box-shadow: 0 0 15px $blue;
+
+    }
+    &--last{
+      margin-right: 0;
+
+    }
+
+    &--active{
+      border: 2px solid $blue;
+      border-radius: 8px;
+      color: $blue;
+      box-shadow: 0 0 15px $blue;
+    }
+  }
+
+  &__content{
+    width: 100%;
+    padding: 15px;
+    @include display-flex(column, flex-start, center);
+
+  }
+  &__title{
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: $white;
+    margin-bottom: 30px;
+  }
+
+  &__description{
+    background-color: $whithOpacity;
+    padding: 10px;
+    font-size: 20px;
+    text-transform: capitalize;
+    letter-spacing: 0.05em;
+    color: $black;
+  }
+
+  &__scroll{
+    border: 2px solid $base-text-color;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    @include display-flex(rows, center, center);
+    @include transition(0.5s);
+    cursor: pointer;
+    &:hover{
+      background-color: $blue;
+      border-color: transparent;
+    }
+  }
+}
+//----------fa------------------------------------------------------------------
+.fa-chevron-down{
+  font-size: 18px;
+}
+//----------logo---------------------------------------------------------------
+.logo{
+  position: relative;
+  @include display-flex(rows, flex-start, center);
+  &__word{
+    font-family: 'Racing Sans One', cursive;
+    font-size: 32px;
+    letter-spacing: 0.05em;
+    margin-right: 15px;
+    text-transform: uppercase;
+    &--first{
+      color: $blue;
+      margin-right: 0;
+    }
+    &--second{
+      color: $yellow;
+    }
+  }
+  &::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: $red;
+    @include transition(0.5s);
+    animation: opacity 1s infinite;
+  }
+}
+
+@keyframes opacity {
+  0% {opacity: 1;}
+  50% {opacity: 0}
+  100% {opacity: 1;}
+}
+
+//----------BGVideo-------------------------------------------------------------
+.homepage-hero-module {
+    border-right: none;
+    border-left: none;
+    position: relative;
+}
+.no-video .video-container video,
+.touch .video-container video {
+    display: none;
+}
+.no-video .video-container .poster,
+.touch .video-container .poster {
+    display: block !important;
+}
+.video-container {
+    position: relative;
+    bottom: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+}
+.video-container .poster img {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+.video-container .filter {
+    z-index: 100;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+}
+.video-container video {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+}
+.video-container video.fillWidth {
+    width: 100%;
+}
+//------------------------------------------------------------------------------
