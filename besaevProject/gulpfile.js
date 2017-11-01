@@ -38,7 +38,10 @@ gulp.task('html', () => {
 
 /*Task for CSS*/
 gulp.task('css', () => {
-  gulp.src('./src/styles/main.scss')
+  gulp.src(['./src/styles/main.scss',
+      './node_modules/slick-carousel/slick/slick.css',
+      './node_modules/slick-carousel/slick/slick-theme.css'
+  ])
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(sourcemaps.init())
     .pipe(autoprefixer({
@@ -54,13 +57,9 @@ gulp.task('css', () => {
 /*Task for JS*/
 gulp.task('js', () => {
   gulp.src([
-    './src/libs/jquery/dist/jquery.min.js',
-    './src/libs/slick/dist/slick.min.js',
-    './src/libs/slick-carousel/slick/slick.js',
-    './src/libs/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.min.js',
-    './src/libs/device/dist/devicejs.min.js',
-    './src/js/parts/first.js',
-    './src/js/parts/second.js'
+    './node_modules/jquery/dist/jquery.min.js',
+    './node_modules/slick-carousel/slick/slick.min.js',
+    './src/js/parts/*.js',
   ])
     .pipe(concat('main.js'))
     .pipe(minify({
@@ -98,7 +97,9 @@ gulp.task('image', () => {
 
 /* Task for Fonts */
 gulp.task('fonts', () => {
-  gulp.src('./src/fonts/**/*.*')
+  gulp.src(['./src/fonts/**/*.*',
+    './node_modules/slick-carousel/slick/fonts/*.*'
+  ])
     .pipe(newer('./build/fonts/'))
     .pipe(gulp.dest('./build/fonts/'))
 });

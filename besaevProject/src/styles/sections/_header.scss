@@ -9,7 +9,7 @@
     width: 100%;
     max-width: 1366px;
     height: 100%;
-    padding: 25px 15px;
+    padding: 35px 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,27 +22,27 @@
     border: 6px solid $white;
     &--tl{
       top: 15px;
-      left: 0;
+      left: 15px;
       border-right: none;
       border-bottom: none;
 
     }
     &--tr{
       top: 15px;
-      right: 0;
+      right: 15px;
       border-left: none;
       border-bottom: none;
       z-index: -1;
     }
     &--br{
       bottom: 15px;
-      right: 0;
+      right: 15px;
       border-left: none;
       border-top: none;
     }
     &--bl{
       bottom: 15px;
-      left: 0;
+      left: 15px;
       border-right: none;
       border-top: none;
     }
@@ -58,17 +58,36 @@
   &__logo{
     padding: 5px;
     width: 100%;
-    max-width: 320px;
+    max-width: 400px;
     margin-right: 15px;
   }
 
+  &__hamburger{
+    display: none;
+    @media(max-width: 950px){
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    }
+  }
+
   &__nav{
-    padding: 5px
+    width: 100%;
+    max-width: 500px;
+    height: 50px;
+    @include display-flex(wrap, space-around, center);
+    @media(max-width: 950px){
+      display: none;
+    }
+
   }
   &__link{
-    margin-right: 70px;
     padding: 4px;
     font-family: 'Open Sans';
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
     color: $white;
     @include transition(0.5s);
     cursor: pointer;
@@ -101,6 +120,8 @@
     font-size: 40px;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    line-height: 1.78em;
+    text-align: center;
     color: $white;
     margin-bottom: 30px;
   }
@@ -113,59 +134,69 @@
     letter-spacing: 0.05em;
     color: $black;
   }
-
   &__scroll{
-    border: 2px solid $base-text-color;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    @include display-flex(rows, center, center);
-    @include transition(0.5s);
-    cursor: pointer;
-    &:hover{
-      background-color: $blue;
-      border-color: transparent;
-    }
+    position: relative;
+    width: 100px;
+    height: 100px;
   }
 }
+
+
 //----------fa------------------------------------------------------------------
-.fa-chevron-down{
-  font-size: 18px;
+.fa-angle-down{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: $blue;
+  @include transition(0.5s);
+  animation: upDown 4s  ease-in-out infinite;
+  &:hover{
+    animation: none;
+    color: $yellow;
+  }
 }
+@keyframes upDown {
+  0% {top: 50%; left: 50%; transform: translate(-50%, -50%);}
+  50% {top: 40%; left: 50%; transform: translate(-50%, -50%);}
+  100% {top: 50%; left: 50%; transform: translate(-50%, -50%);}
+}
+
 //----------logo---------------------------------------------------------------
 .logo{
   position: relative;
   @include display-flex(rows, flex-start, center);
   &__word{
     font-family: 'Racing Sans One', cursive;
-    font-size: 32px;
+    font-size: 30px;
     letter-spacing: 0.05em;
     margin-right: 15px;
     text-transform: uppercase;
     &--first{
+      font-size: 36px;
       color: $blue;
       margin-right: 0;
     }
     &--second{
+      font-size: 36px;
       color: $yellow;
     }
-  }
-  &::after{
-    content: '';
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 20px;
-    border: 1px solid transparent;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    background-color: $red;
-    @include transition(0.5s);
-    animation: opacity 1s infinite;
+    &--third{
+      color: $white;
+    }
+    &--four{
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      margin-right: 0;
+      border: 1px solid transparent;
+      border-radius: 50%;
+      background-color: $red;
+      @include transition(0.5s);
+      animation: opacity 1s infinite;
+    }
   }
 }
-
 @keyframes opacity {
   0% {opacity: 1;}
   50% {opacity: 0}
