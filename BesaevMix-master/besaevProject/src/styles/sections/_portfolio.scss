@@ -1,0 +1,16 @@
+.portfolio{
+  &__wrap{
+    background-color: $whiteOpacity;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__container{
+    border-radius: 4px;
+    width: 100%;
+    padding: 15px 15px;
+    display: flex;
+    background-color: $blackOverlay;
+    margin-bottom: 30px;
+  }
+}

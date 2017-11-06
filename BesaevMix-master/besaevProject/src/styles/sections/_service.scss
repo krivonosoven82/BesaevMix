@@ -1,0 +1,43 @@
+.service{
+  &__wrap{
+    background-color: $whiteOpacity;
+  }
+  &__price-list{
+    width: 100%;
+    padding: 25px 15px;
+    background-color: $blackOverlay;
+    border-radius: 4px;
+  }
+  &__container{
+    margin-bottom: 30px;
+    &:last-of-type{
+      margin-bottom: 0;
+    }
+  }
+  &__paragraph{
+    margin-bottom: 10px;
+    font-family: 'Open Sans';
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.05px;
+    text-transform: uppercase;
+    color: $yellow;
+  }
+  &__description{
+    border-bottom: 2px dashed $white;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  &__subparagraph{
+    font-size: 16px;
+    text-transform: uppercase;
+    color: $white;
+  }
+
+
+}

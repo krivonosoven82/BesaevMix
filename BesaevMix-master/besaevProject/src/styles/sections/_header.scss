@@ -1,0 +1,148 @@
+.header {
+  position: relative;
+  min-height: 100vh;
+  &__container{
+    border: 1px solid white;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1366px;
+    height: 100%;
+    padding: 50px 15px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__title{
+    margin-bottom: 70px;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $white;
+    text-shadow: 1px 1px 1px $black;
+  }
+  &__logo{
+    margin-bottom: 100px;
+    font-family: 'Archivo Black';
+    font-size: 92px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $yellow;
+    text-shadow: 1px 1px 1px $black;
+  }
+  &__description{
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: $whiteOpacity;
+  }
+  &__slogan{
+    margin-bottom: 50px;
+    font-family: 'Archivo Black';
+    font-size: 32px;
+    text-transform: uppercase;
+    color: $white;
+    text-shadow: 1px 1px 1px $black;
+  }
+  &__btn{
+    width: 220px;
+    height: 50px;
+    border: none;
+    border-radius: 2px;
+    background-color: $yellow;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $white;
+    text-shadow: 1px 1px 1px $black;
+    animation: changeColor 4s  ease-in-out infinite;
+    @include transition(1s);
+    &:hover{
+      animation:none;
+      background-color: $blue;
+    }
+  }
+  &__scroll{
+    background-color: white;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+  }
+}
+
+//----------fa------------------------------------------------------------------
+.fa-angle-down{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: $blue;
+  @include transition(0.5s);
+  animation: upDown 4s  ease-in-out infinite;
+  &:hover{
+    animation: none;
+    color: $yellow;
+  }
+}
+//----------ANIMATE-------------------------------------------------------------
+
+//----------animate header__srcoll
+@keyframes upDown {
+  0% {top: 50%; left: 50%; transform: translate(-50%, -50%);}
+  50% {top: 40%; left: 50%; transform: translate(-50%, -50%);}
+  100% {top: 50%; left: 50%; transform: translate(-50%, -50%);}
+}
+//----------animate header__btn
+@keyframes changeColor{
+  0%{background-color: $yellow;}
+  50%{background-color: darken($yellow, 8%);}
+  100%{background-color: $yellow;}
+}
+
+
+//----------BGVideo-------------------------------------------------------------
+.homepage-hero-module {
+    border-right: none;
+    border-left: none;
+    position: relative;
+}
+.no-video .video-container video,
+.touch .video-container video {
+    display: none;
+}
+.no-video .video-container .poster,
+.touch .video-container .poster {
+    display: block !important;
+}
+.video-container {
+    position: relative;
+    bottom: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+}
+.video-container .poster img {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+.video-container .filter {
+    z-index: 100;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+}
+.video-container video {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+}
+.video-container video.fillWidth {
+    width: 100%;
+}
+//------------------------------------------------------------------------------

@@ -2,11 +2,14 @@ body {
   min-width: 320px;
   position: relative;
   font-size: 14px;
-  font-family: 'Roboto', 'Open Sans', sans-serif;
+  font-family: 'Roboto', 'Open Sans', 'Archivo Black','slick', 'ionicons', 'fontawesome-webfont', sans-serif;
   font-weight: 400;
   color: $base-text-color;
   line-height: 1;
   overflow-x: hidden;
+  background: url(../img/bg-contact.jpg) no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
   &.hidden {
       overflow: hidden;
   }
@@ -112,5 +115,9 @@ li {
     text-transform: uppercase;
     letter-spacing: 0.05em;
     color: $yellow;
+    text-shadow: 1px 1px 1px $black;
     margin-bottom: 80px;
+    &--color{
+      color: $white;
+    }
   }

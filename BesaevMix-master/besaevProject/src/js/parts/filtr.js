@@ -23,9 +23,9 @@ $(document).ready(function(){
   });
 
 //-----------Class-active for gallery__item-------------------------------------
-  $('.gallery__item').click(function(){
-    $(this).toggleClass('gallery__item--active');
-  });
+  // $('.gallery__item').click(function(){
+  //   $(this).toggleClass('gallery__item--active');
+  // });
 
-  
+
 });
