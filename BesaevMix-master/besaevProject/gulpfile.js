@@ -39,6 +39,7 @@ gulp.task('html', () => {
 /*Task for CSS*/
 gulp.task('css', () => {
   gulp.src(['./src/styles/main.scss',
+      './src/styles/*.css',
       './node_modules/slick-carousel/slick/slick.css',
       './node_modules/slick-carousel/slick/slick-theme.css'
   ])

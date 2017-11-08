@@ -2,7 +2,6 @@
   position: relative;
   min-height: 100vh;
   &__container{
-    border: 1px solid white;
     position: absolute;
     top: 0;
     left: 50%;
@@ -65,7 +64,6 @@
     }
   }
   &__scroll{
-    background-color: white;
     position: relative;
     width: 100px;
     height: 100px;
