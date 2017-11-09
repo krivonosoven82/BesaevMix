@@ -1,7 +1,5 @@
 $(document).ready(function(){
   //----------youtube-----------------------------------------------------------
-  $('.portfolio__slider').slick();
-
-  //----------fancybox
+  $('.gallery__slider').slick();
 
 });

@@ -27,5 +27,4 @@ $(document).ready(function(){
   //   $(this).toggleClass('gallery__item--active');
   // });
 
-
 });
