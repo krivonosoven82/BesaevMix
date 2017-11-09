@@ -45,16 +45,14 @@
     overflow: hidden;
     cursor: pointer;
     transition: all 0.4s ease-in-out;
-    &:hover{
 
-    }
-    &--active{
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 2;
-    }
+    // &--active{
+    //   position: absolute;
+    //   top: 50%;
+    //   left: 50%;
+    //   transform: translate(-50%, -50%);
+    //   z-index: 2;
+    // }
 
   }
   &__overlay{
@@ -73,6 +71,26 @@
     background-color: $blackOverlay;
     opacity: 0;
     @include transition(0.4s);
+  }
+  &__modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 100%;
+    background-color: $grayOpacity;
+    z-index: 3;
+  }
+  &__subtitle{
+    margin-bottom: 15px;
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-align: center;
+    color: $yellow;
+    text-shadow: 1px 1px 1px $black;
   }
   &__media{
     width: 100%;
@@ -160,4 +178,32 @@ iframe{
 }
 .fa-angle-right{
   color: $black;
+}
+//----------modal
+.modal{
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__exit{
+    align-self: flex-end;
+    margin: 0 170px 15px 0;
+    display: inline-block;
+    font-size: 66px;
+    color: $white;
+    text-shadow: 1px 1px 1px $black;
+    cursor: pointer;
+    @include transition(0.3s);
+    &:hover{
+      color: $blue;
+
+    }
+  }
+  &__container{
+    border: 1px solid red;
+    background-color: green;
+    width: 100%;
+    max-width: 900px;
+    height: 650px;
+  }
 }

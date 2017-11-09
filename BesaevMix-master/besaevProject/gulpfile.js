@@ -41,7 +41,7 @@ gulp.task('css', () => {
   gulp.src(['./src/styles/main.scss',
       './src/styles/*.css',
       './node_modules/slick-carousel/slick/slick.css',
-      './node_modules/slick-carousel/slick/slick-theme.css'
+      './node_modules/slick-carousel/slick/slick-theme.css',
   ])
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(sourcemaps.init())
@@ -78,13 +78,15 @@ gulp.task('js', () => {
 gulp.task('php', () => {
   gulp.src('./src/php/**/*.php')
     .pipe(newer('./build/'))
-    .pipe(gulp.dest('./build/php/'))
+    .pipe(gulp.dest('./build'))
     .pipe(reload({ stream: true }));
 });
 
 /*Task for Images*/
 gulp.task('image', () => {
-  gulp.src('./src/img/**/*.*')
+  gulp.src([
+    './src/img/**/*.*'
+  ])
     .pipe(newer('./build/img/'))
     .pipe(imagemin({
       progressive: true,

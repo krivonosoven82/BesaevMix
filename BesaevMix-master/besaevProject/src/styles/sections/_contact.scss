@@ -4,11 +4,12 @@
   }
   &__container{
     height: 450px;
+    margin-bottom: 30px;
     display: flex;
-    border-radius: 4px;
   }
   &__map{
     background-color: $black;
+    border-radius: 4px 0 0 4px;
     width: 70%;
   }
   &__address{
@@ -18,6 +19,7 @@
     align-items: center;
     justify-content: center;
     background-color: $blackOverlay;
+    border-radius: 0 4px 4px 0;
   }
   &__title{
     margin-bottom: 15px;
@@ -44,6 +46,92 @@
       margin-bottom: 0;
     }
   }
+  &__form{
+    padding: 15px;
+    border-radius: 4px;
+    background-color: $blackOverlay;
+  }
+  &__subtitle{
+    margin-bottom: 15px;
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-align: center;
+    color: $yellow;
+    text-shadow: 1px 1px 1px $black;
+  }
+}
+//----------form
+.form{
+  display: flex;
+  justify-content: center;
 
-
+  &__container{
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    &--left{
+      margin-right: 30px;
+    }
+    &--right{
+    }
+  }
+  &__label{
+    margin-bottom: 15px;
+    padding-left: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &--margin{
+      margin-bottom: 0;
+    }
+  }
+  &__span{
+    margin-right: 15px;
+    text-transform: uppercase;
+    color: $white;
+    text-shadow: 1px 1px 1px $black;
+  }
+  &__input{
+    width: 300px;
+    height: 50px;
+    padding: 0 5px;
+    background-color: $whiteOpacity;
+    border-radius: 2px;
+    outline: none;
+    border: 1px solid transparent;
+    color: $black;
+  }
+  &__textarea{
+    width: 300px;
+    height: 185px;
+    padding: 0 5px;
+    background-color: $whiteOpacity;
+    border-radius: 2px;
+    outline: none;
+    border: 1px solid transparent;
+    color: $black;
+    resize: none;
+  }
+  &__btn{
+    align-self: flex-end;
+    width: 220px;
+    height: 50px;
+    border: none;
+    border-radius: 2px;
+    background-color: $yellow;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $white;
+    text-shadow: 1px 1px 1px $black;
+    animation: changeColor 4s  ease-in-out infinite;
+    @include transition(1s);
+    &:hover{
+      animation:none;
+      background-color: $blue;
+    }
+  }
 }

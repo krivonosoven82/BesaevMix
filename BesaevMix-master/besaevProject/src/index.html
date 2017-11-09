@@ -104,23 +104,9 @@
           <span class="service__subparagraph">15-200&euro;</span>
         </p>
       </div>
-
-
       </div>
     </div>
   </section>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <!--  -->
@@ -163,14 +149,22 @@
         <div class="gallery__overlay">action studio mix</div>
       </div>
       <div class="gallery__item scene">
-        <img class="img" src="./img/scene2.jpg" alt="photo">
+        <a href="">
+          <img class="img" src="./img/scene2.jpg" alt="photo">
+        </a>
         <div class="gallery__overlay">action studio mix</div>
       </div>
     </div>
+    <div class="gallery__modal modal">
+      <span class="modal__exit">&times;</span>
+      <div class="modal__container"></div>
+    </div>
+
+    <p class="gallery__subtitle">our works</p>
     <div class="gallery__media">
     <div class="gallery__video video">
       <div class="video__prev"><i class="fa fa-angle-left fa-4x" aria-hidden="true"></i></div>
-      <div class="video__next"><i class="fa fa-angle-right fa-4x" aria-hidden="true"></div>
+      <div class="video__next"><i class="fa fa-angle-right fa-4x" aria-hidden="true"></i></div>
       <div class="portfolio__slider">
        <div class="portfolio__slider-item">
          <iframe
@@ -204,8 +198,6 @@
     <div class="portfolio__wrap wrap">
       <p class="title title--color">about us</p>
       <div class="portfolio__container">
-        <button id="about-btn">click</button>
-        <span id="span">Teeeeeeeeeext</span>
       </div>
     </div>
   </section>
@@ -230,6 +222,37 @@
             Ukraine</address>
           </div>
         </div>
+      </div>
+      <div class="contact__form">
+        <p class="contact__subtitle">write to us</p>
+        <form id="form" class="form">
+         <!-- Hidden Required Fields -->
+         <input type="hidden" name="project_name" value="Action Studio Mix">
+         <input type="hidden" name="admin_email" value="besaevalensandr@gmail.com">
+         <input type="hidden" name="form_subject" value="order">
+         <!-- END Hidden Required Fields -->
+         <div class="form__container form__container--left">
+           <label class="form__label">
+             <span class="form__span">name</span>
+             <input class="form__input" type="text" name="name" placeholder="name" required />
+           </label>
+           <label class="form__label">
+             <span class="form__span">email</span>
+             <input class="form__input" type="email" name="email" placeholder="email" required />
+           </label>
+           <label class="form__label form__label--margin">
+             <span class="form__span">phone</span>
+             <input class="form__input" type="text" name="phone" placeholder="phone" required/>
+           </label>
+         </div>
+         <div class="form__container">
+           <label class="form__label">
+             <span class="form__span">message</span>
+             <textarea id="message" class="form__textarea" name="message" placeholder="message" required></textarea>
+           </label>
+           <button class="form__btn">send</button>
+         </div>
+       </form>
       </div>
 
     </div>
