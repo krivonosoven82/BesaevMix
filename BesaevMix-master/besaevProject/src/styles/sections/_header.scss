@@ -79,6 +79,61 @@
     height: 600px;
     background-color: $blackOverlay;
   }
+
+  &__navbar-scroll{
+    position: fixed;
+    top: 0;
+    background-color: $blueOpacity;
+    width: 100%;
+    height: 60px;
+    z-index: 3;
+    opacity: 0;
+    &.is-visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+  &__navbar-wrap{
+    width: 100%;
+    height: 100%;
+    max-width: 1366px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__navbar-logo{
+    font-family: 'Archivo Black';
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: $white;
+    text-shadow: 1px 1px 1px $black;
+  }
+  &__nav-item{
+    margin-right: 30px;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 5px;
+    color: $black;
+    text-shadow: 1px 1px 1px $black;
+    &:last-of-type{
+      margin-right: 0;
+    }
+    &--active{
+      color: $white;
+      text-shadow: 1px 1px 1px $black;
+      border-bottom: 2px solid $white;
+    }
+    &:hover{
+      color: $white;
+      text-shadow: 1px 1px 1px $black;
+      border-bottom: 2px solid $white;
+    }
+  }
+
+
   &__scroll{
     position: relative;
     width: 100px;
