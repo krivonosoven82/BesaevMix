@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,14 +14,14 @@
   <header id="head" class="header">
     <div class="homepage-hero-module">
       <div class="video-container">
-          <div class="filter"></div>
-          <video autoplay loop class="fillWidth">
-              <source src="./img/Ma-Vibes.MP4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
-              <source src="./img/Ma-Vibes.WEBM" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
-          </video>
-          <div class="poster hidden">
-              <img src="./img/Ma-Vibes.jpg" alt="">
-          </div>
+        <div class="filter"></div>
+      <video autoplay loop class="fillWidth">
+          <source src="./img/Ma-Vibes.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+          <source src="./img/Ma-Vibes.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+      <!-- </video> -->
+      <div class="poster hidden">
+          <img src="./img/Ma-Vibes.jpg" alt="">
+      </div>
       </div>
     </div>
     <div class="header__container">
@@ -33,9 +33,41 @@
         <p class="header__slogan">your desires are our priorities</p>
         <p class="header__description">Contact us to find out more</p>
         <button id="connect" class="header__btn">connect with us</button>
+        <div class="header__modal modal">
+          <span id="exit" class="modal__exit">&times;</span>
+          <div class="modal__container">
+            <form id="form" class="modal-form">
+             <!-- Hidden Required Fields -->
+             <input type="hidden" name="project_name" value="Action Studio Mix">
+             <input type="hidden" name="admin_email" value="besaevalensandr@gmail.com">
+             <input type="hidden" name="form_subject" value="order">
+             <!-- END Hidden Required Fields -->
 
+               <label class="modal-form__label">
+                 <span class="form__span form__span--textBlack">name</span>
+                 <input class="modal-form__input" type="text" name="name" placeholder="name" required />
+               </label>
+               <label class="modal-form__label">
+                 <span class="form__span form__span--textBlack">email</span>
+                 <input class="modal-form__input" type="email" name="email" placeholder="email" required />
+               </label>
+               <label class="modal-form__label">
+                 <span class="form__span form__span--textBlack">phone</span>
+                 <input class="modal-form__input" type="text" name="phone" placeholder="phone" required/>
+               </label>
+
+
+               <label class="modal-form__label">
+                 <span class="form__span form__span--textBlack">message</span>
+                 <textarea id="message" class="modal-form__textarea" name="message" placeholder="message" required></textarea>
+               </label>
+               <button class="modal-form__btn">send</button>
+
+           </form>
+          </div>
+        </div>
       </div>
-      <a  class="header__scroll" href="#parice-list"><i class="fa fa-angle-down fa-5x" aria-hidden="true"></i></a>
+      <a class="header__scroll" href="#parice-list"><i class="fa fa-angle-down fa-5x" aria-hidden="true"></i></a>
 
     </div>
   </header>
@@ -216,7 +248,7 @@
   <!--  -->
   <section id="about-us" class="about main">
     <div class="about__wrap wrap">
-      <p class="title">why are we</p>
+      <p class="title">why are we?</p>
       <div class="about__container">
         <div class="about__item item">
           <p class="item__title">we are professionals</p>
@@ -239,7 +271,7 @@
         </div>
       </div>
     </div>
-
+  </section>
   <!--  -->
   <section id="contact" class="contact main">
     <div class="contact__wrap wrap">
@@ -261,7 +293,7 @@
       </div>
       <div class="contact__form">
         <p class="contact__subtitle">write to us</p>
-        <form id="form" class="form">
+        <form id="form1" class="form">
          <!-- Hidden Required Fields -->
          <input type="hidden" name="project_name" value="Action Studio Mix">
          <input type="hidden" name="admin_email" value="besaevalensandr@gmail.com">
@@ -284,7 +316,7 @@
          <div class="form__container">
            <label class="form__label">
              <span class="form__span">message</span>
-             <textarea id="message" class="form__textarea" name="message" placeholder="message" required></textarea>
+             <textarea id="message1" class="form__textarea" name="message" placeholder="message" required></textarea>
            </label>
            <button class="form__btn">send</button>
          </div>
@@ -294,7 +326,9 @@
     </div>
   </section>
   <footer class="footer">
-    <div class="footer__logo"></div>
+    <div class="footer__logo">
+
+    </div>
     <div class="footer__social"></div>
   </footer>
 

@@ -93,6 +93,10 @@
     text-transform: uppercase;
     color: $white;
     text-shadow: 1px 1px 1px $black;
+    &--textBlack{
+      color: $black;
+      text-shadow: 1px 1px 1px $white;
+    }
   }
   &__input{
     width: 300px;
@@ -103,6 +107,9 @@
     outline: none;
     border: 1px solid transparent;
     color: $black;
+    &:focus{
+      border-color: $black;
+    }
   }
   &__textarea{
     width: 300px;
@@ -114,6 +121,9 @@
     border: 1px solid transparent;
     color: $black;
     resize: none;
+    &:focus{
+      border-color: $black;
+    }
   }
   &__btn{
     align-self: flex-end;
