@@ -16,6 +16,7 @@
   }
   &__head{
     position: relative;
+    padding-bottom: 50px;
   }
   &__title{
     margin-bottom: 70px;
@@ -49,6 +50,9 @@
     text-shadow: 1px 1px 1px $black;
   }
   &__btn{
+    position: absolute;
+    bottom: 0;
+    left: 0;
     width: 220px;
     height: 50px;
     border: none;
@@ -62,7 +66,7 @@
     animation: changeColor 4s  ease-in-out infinite;
     @include transition(1s);
     &:hover{
-      animation:none;
+      animation: buttonMove 2s ease-in-out 1;
       background-color: $blue;
     }
   }
@@ -93,7 +97,7 @@
   }
   &__exit{
     margin-left: 630px;
-    font-size: 36px;
+    font-size: 56px;
     color: $white;
     text-shadow: 1px 1px 1px $black;
     cursor: pointer;
@@ -121,36 +125,31 @@
     flex-direction: column;
     justify-content: center;
     &__label{
+      position: relative;
       margin-bottom: 15px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      &:last-of-type{
+        margin-bottom: 50px;
+      }
     }
     &__input{
-      outline: none;
-      border: 1px solid transparent;
-      border-radius: 2px;
       width: 100%;
       max-width: 300px;
       height: 30px;
       padding: 0 5px;
-      &:focus{
-        border-color: $black;
-      }
-    }
-    &__textarea{
+      background-color: transparent;
       outline: none;
-      border: 1px solid transparent;
+      border: none;
+      border-bottom: 2px solid $black;
       border-radius: 2px;
-      width: 100%;
-      max-width: 300px;
-      height: 100px;
-      padding: 0 5px;
-      resize: none;
+      z-index: 1;
       &:focus{
         border-color: $black;
       }
     }
+
     &__btn{
       width: 210px;
       height: 50px;
@@ -192,8 +191,16 @@
 //----------animate header__btn
 @keyframes changeColor{
   0%{background-color: $yellow;}
-  50%{background-color: darken($yellow, 8%);}
+  50%{background-color: darken($yellow, 20%);}
   100%{background-color: $yellow;}
+}
+@keyframes buttonMove{
+  0%{transform: translateX(0);}
+  25%{transform: translateX(5px);}
+  50%{transform: translateX(0);}
+  75%{transform: translateX(5px);}
+  100%{transform: translateX(0);}
+
 }
 
 
@@ -239,4 +246,11 @@
 .video-container video.fillWidth {
     width: 100%;
 }
-//------------------------------------------------------------------------------
+//----------placeholder------
+::-webkit-input-placeholder {
+  color: $gray;
+}
+:focus::-webkit-input-placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
