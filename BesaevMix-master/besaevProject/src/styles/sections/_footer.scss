@@ -8,6 +8,9 @@
   justify-content: space-around;
   align-items: center;
   background-color: black;
+  @media(max-width: 820px){
+    flex-direction: column;
+  }
   &__container{
     width: 100%;
     max-width: 500px;
@@ -16,6 +19,12 @@
     align-items: center;
     &--right{
       justify-content: flex-end;
+    }
+    @media(max-width: 820px){
+      justify-content: center;
+      @media(max-width: 480px){
+        flex-direction: column;
+      }
     }
   }
   &__logo{
@@ -31,6 +40,9 @@
     text-transform: uppercase;
     color: $yellow;
     text-shadow: 1px 1px 1px $black;
+    @media(max-width: 480px){
+      margin-bottom: 15px;
+    }
   }
   &__social{
     display: inline-flex;
