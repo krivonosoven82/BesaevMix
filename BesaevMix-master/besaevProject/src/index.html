@@ -35,38 +35,19 @@
         <p class="wow fadeInLeft header__slogan" data-wow-delay="1.5s">your desires are our priorities</p>
         <p class="wow fadeInLeft header__description" data-wow-delay="2s">Contact us to find out more</p>
         <button id="connect" class="header__btn">connect with us</button>
-        <div class="header__modal modal">
-          <span id="exit" class="modal__exit">&times;</span>
-          <div class="modal__container">
-            <form id="form" class="modal-form">
-             <!-- Hidden Required Fields -->
-             <input type="hidden" name="project_name" value="Action Studio Mix">
-             <input type="hidden" name="admin_email" value="besaevalensandr@gmail.com">
-             <input type="hidden" name="form_subject" value="order">
-             <!-- END Hidden Required Fields -->
-               <label class="modal-form__label">
-                 <span class="form__span form__span--textBlack">name</span>
-                 <input class="modal-form__input" type="text" name="name" placeholder="name" required />
-               </label>
-               <label class="modal-form__label">
-                 <span class="form__span form__span--textBlack">email</span>
-                 <input class="modal-form__input" type="email" name="email" placeholder="email" required />
-               </label>
-               <label class="modal-form__label">
-                 <span class="form__span form__span--textBlack">phone</span>
-                 <input class="modal-form__input" type="text" name="phone" placeholder="phone" required/>
-               </label>
-               <button class="modal-form__btn">send</button>
-           </form>
-          </div>
+
+        <div class="header__scroll-wrap">
+          <a class="header__scroll" href="#parice-list">
+            <i class="fa fa-angle-down fa-4x" aria-hidden="true"></i>
+          </a>
         </div>
       </div>
-
-      <a class="header__scroll" href="#parice-list"><i class="fa fa-angle-down fa-5x" aria-hidden="true"></i></a>
     </div>
+
     <div id="nav-scroll" class="header__navbar-scroll">
       <div class="header__navbar-wrap">
         <p class="header__navbar-logo">action studio mix</p>
+        <div id="mobail" class="header__navbar-mobail"></div>
         <nav class="header__nav">
           <a href="#head" class="header__nav-item header__nav-item--active">Home</a>
           <a href="#parice-list" class="header__nav-item">Price-list</a>
@@ -76,8 +57,18 @@
         </nav>
       </div>
     </div>
+      <nav id="mobail-scroll" class="header__nav-mobail mobail">
+        <a href="#head" class="mobail__item mobail__item--active">Home</a>
+        <a href="#parice-list" class="mobail__item">Price-list</a>
+        <a href="#gallery" class="mobail__item">Gallery</a>
+        <a href="#about-us" class="mobail__item">About us</a>
+        <a href="#contact" class="mobail__item">Contact</a>
+      </nav>
   </header>
-  <section id="parice-list" class="service main">
+
+
+
+  <section id="parice-list" class="service">
     <div class="service__wrap wrap">
       <p class="wow zoomIn title" data-wow-offset="50">price-list</p>
       <div class="service__price-list">
@@ -144,41 +135,46 @@
       </div>
     </div>
   </section>
-<section id="gallery" class="gallery main">
+<section id="gallery" class="gallery">
   <div class="gallery__wrap wrap">
     <p class="wow zoomIn title" data-wow-offset="50">gallery</p>
     <div class="gallery__container">
+
       <a class="wow zoomInDown gallery__item" data-fancybox="gallery"
        href="./img/studio1.jpg">
         <img class="img" src="./img/studio1s.jpg">
       </a>
       <a class="wow zoomInDown gallery__item" data-fancybox="gallery"
-       data-wow-delay="0.2s" href="./img/studio2.jpg">
+       href="./img/studio2.jpg">
         <img class="img" src="./img/studio2s.jpg">
       </a>
       <a class="wow zoomInDown gallery__item" data-fancybox="gallery"
-       data-wow-delay="0.4s" href="./img/studio3.jpg">
+        href="./img/studio3.jpg">
         <img class="img" src="./img/studio3s.jpg">
       </a>
       <a class="wow zoomInDown gallery__item" data-fancybox="gallery"
-       data-wow-delay="0.6s" href="./img/equipment1.jpg">
-        <img class="img" src="./img/equipment1s.jpg">
+        href="./img/studio4.jpg">
+        <img class="img" src="./img/studio4s.jpg">
       </a>
       <a class="wow zoomInDown gallery__item" data-fancybox="gallery"
-       data-wow-delay="0.8s" href="./img/equipment2.jpg">
-        <img class="img" src="./img/equipment2s.jpg">
+        href="./img/studio5.jpg">
+        <img class="img" src="./img/studio5s.jpg">
       </a>
       <a class="wow zoomInDown gallery__item" data-fancybox="gallery"
-       data-wow-delay="1.2s" href="./img/equipment3.jpg">
-        <img class="img" src="./img/equipment3s.jpg">
+        href="./img/studio6.jpg">
+        <img class="img" src="./img/studio6s.jpg">
       </a>
       <a class="wow zoomInDown gallery__item" data-fancybox="gallery"
-       data-wow-delay="1.4s" href="./img/scene1.jpg">
-        <img class="img" src="./img/scene1s.jpg">
+        href="./img/studio7.jpg">
+        <img class="img" src="./img/studio7s.jpg">
       </a>
       <a class="wow zoomInDown gallery__item" data-fancybox="gallery"
-       data-wow-delay="1.6s" href="./img/scene2.jpg">
-        <img class="img" src="./img/scene2s.jpg">
+        href="./img/studio8.jpg">
+        <img class="img" src="./img/studio8s.jpg">
+      </a>
+      <a class="wow zoomInDown gallery__item" data-fancybox="gallery"
+        href="./img/studio9.jpg">
+        <img class="img" src="./img/studio9s.jpg">
       </a>
     </div>
     <p class="wow zoomIn gallery__subtitle" data-wow-offset="50">our works</p>
@@ -208,14 +204,14 @@
   </div>
 </div>
 </section>
-  <section id="about-us" class="about main">
+  <section id="about-us" class="about">
     <div class="about__wrap wrap">
-      <p class="wow zoomIn title" data-wow-offset="50">why are we?</p>
+      <p class="wow zoomIn title" data-wow-offset="50">reason to choose us</p>
       <div class="about__container">
         <div class=" wow flipInY about__item item">
           <p class="item__title">we are professionals</p>
           <p class="item__description">Our specialists know
-             and love their business</p>
+             and love their work</p>
           <span class="item__icon fa fa-graduation-cap fa-3x" aria-hidden="true"></span>
         </div>
         <div class=" wow flipInY about__item item"
@@ -236,16 +232,19 @@
       </div>
     </div>
   </section>
-  <section id="contact" class="contact main">
+  <section id="contact" class="contact">
     <div class="contact__wrap wrap">
       <p class="wow zoomIn title" data-wow-offset="50">contact</p>
       <div class="contact__container">
-        <div id="map" class="contact__map"></div>
+        <div class="contact__map">
+          <iframe class="contact__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2696.392697376933!2d34.66135021545233!3d47.482262804552384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dcbf5c45a3726f%3A0x951e64863b1ff858!2z0JrQvtC30LDRhtGM0LrQsCDQstGD0LvQuNGG0Y8sIDUsINCV0L3QtdGA0LPQvtC00LDRgCwg0JfQsNC_0L7RgNGW0LfRjNC60LAg0L7QsdC70LDRgdGC0YwsIDcxNTAw!5e0!3m2!1suk!2sua!4v1510489418833"
+          frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
         <div class="contact__address">
           <p class="contact__title">contact info</p>
           <div class="contact__links">
             <address class="contact__link">+38 (099) 635 73 85</address>
-            <address class="contact__link">besaevalensandr@gmail.com</address>
+            <address class="contact__link">besaevaleksandr@gmail.com</address>
           </div>
           <p class="contact__title">office address</p>
           <div class="contact__links">
@@ -270,8 +269,8 @@
            </label>
            <label class="wow fadeInLeft form__label"
             data-wow-offset="20" data-wow-delay="0.5s">
-             <span class="form__span">email</span>
-             <input class="form__input" type="email" name="email" placeholder="email" required />
+             <span class="form__span">e-mail</span>
+             <input class="form__input" type="email" name="email" placeholder="e-mail" required />
            </label>
            <label class="wow fadeInLeft form__label form__label--margin"
             data-wow-offset="20" data-wow-delay="1s" >
@@ -292,33 +291,63 @@
     </div>
   </section>
   <footer class="footer">
-    <div class="footer__container footer__container--left">
-      <p class="footer__logo">action studio mix</p>
-    </div>
-    <div class="footer__container footer__container--right">
-      <p class="footer__description">We are in social networks</p>
-      <div class="footer__social-group">
-        <a class="wow bounceIn footer__social"
-        href="https://www.facebook.com/alexsandr.besaev?fref=pb&hc_location=friends_tab&pnref=friends.all">
-          <img class="img" src="./img/facebook.svg" alt="">
-        </a>
-        <a class="wow bounceIn footer__social"
-         href="https://www.youtube.com/channel/UCGMEewh5H-cw94ZMuoKzwTQ" data-wow-delay="0.2s">
-          <img class="img" src="./img/youtube.svg" alt="">
-        </a>
-        <a class="wow bounceIn footer__social"
-         href="https://www.instagram.com/alexsandrbesaev/?hl=ru" data-wow-delay="0.4s">
-          <img class="img" src="./img/instagram.svg" alt="">
-        </a>
+    <div class="footer__wrap">
+      <div class="footer__container footer__container--left">
+        <p class="footer__logo">action studio mix</p>
+        <span class="footer__copy">&copy; 2017 web studio
+           <span class="footer__copy-logo">yatip</span>
+         </span>
+      </div>
+      <div class="footer__container footer__container--right">
+        <p class="footer__description">We are in social networks</p>
+        <div class="footer__social-group">
+          <a class="wow bounceIn footer__social"
+          href="https://www.facebook.com/alexsandr.besaev?fref=pb&hc_location=friends_tab&pnref=friends.all">
+            <img class="img" src="./img/facebook.svg" alt="">
+          </a>
+          <a class="wow bounceIn footer__social"
+           href="https://www.youtube.com/channel/UCGMEewh5H-cw94ZMuoKzwTQ" data-wow-delay="0.2s">
+            <img class="img" src="./img/youtube.svg" alt="">
+          </a>
+          <a class="wow bounceIn footer__social"
+           href="https://www.instagram.com/alexsandrbesaev/?hl=ru" data-wow-delay="0.4s">
+            <img class="img" src="./img/instagram.svg" alt="">
+          </a>
+        </div>
       </div>
     </div>
   </footer>
   <button id="button-up" class="button-up">
     <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
   </button>
-  <script async defer
+  <div class="header__modal modal">
+    <span id="exit" class="modal__exit">&times;</span>
+    <div class="modal__container">
+      <form id="form" class="modal-form">
+       <!-- Hidden Required Fields -->
+       <input type="hidden" name="project_name" value="Action Studio Mix">
+       <input type="hidden" name="admin_email" value="besaevalensandr@gmail.com">
+       <input type="hidden" name="form_subject" value="order">
+       <!-- END Hidden Required Fields -->
+         <label class="modal-form__label">
+           <span class="form__span form__span--textBlack">name</span>
+           <input class="modal-form__input" type="text" name="name" placeholder="name" required />
+         </label>
+         <label class="modal-form__label">
+           <span class="form__span form__span--textBlack">e-mail</span>
+           <input class="modal-form__input" type="email" name="email" placeholder="e-mail" required />
+         </label>
+         <label class="modal-form__label">
+           <span class="form__span form__span--textBlack">phone</span>
+           <input class="modal-form__input" type="text" name="phone" placeholder="phone" required/>
+         </label>
+         <button class="modal-form__btn">send</button>
+     </form>
+    </div>
+  </div>
+  <!-- <script async defer
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBclPz8xtvfyGF9IOEwUrxJqyHuqrZPVFU&callback=initMap">
-  </script>
+  </script> -->
   <script src="./js/main.js"></script>
   <script>
     new WOW().init();

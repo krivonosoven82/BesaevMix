@@ -1,15 +1,17 @@
 .footer{
+  background-color: black;
+  &__wrap{
   width: 100%;
   max-width: 1366px;
-  height: 150px;
+  min-height: 150px;
   margin: 0 auto;
   padding: 15px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: black;
   @media(max-width: 820px){
     flex-direction: column;
+    }
   }
   &__container{
     width: 100%;
@@ -17,31 +19,44 @@
     height: 50px;
     display: flex;
     align-items: center;
-    &--right{
-      justify-content: flex-end;
+    @media(max-width: 1000px){
+      flex-direction: column;
     }
-    @media(max-width: 820px){
+    &--left{
+      @media(max-width: 820px){
+        margin-bottom: 40px;
+        }
+    }
+    &--right{
+    @media(max-width: 1000px){
       justify-content: center;
-      @media(max-width: 480px){
-        flex-direction: column;
+      align-items: center;
+      @media(max-width: 820px){
+        margin-bottom: 15px;
       }
     }
   }
+}
   &__logo{
     font-family: 'Archivo Black';
     font-size: 24px;
     left: 0.05em;
+    margin-right: 20px;
     text-transform: uppercase;
     color: $white;
     text-shadow: 1px 1px 1px $black;
+    @media(max-width: 1000px){
+      margin: 0 0 15px 0;
+      font-size: 30px;
+    }
   }
   &__description{
     margin-right: 50px;
     text-transform: uppercase;
     color: $yellow;
     text-shadow: 1px 1px 1px $black;
-    @media(max-width: 480px){
-      margin-bottom: 15px;
+    @media(max-width: 1000px){
+      margin: 0 0 15px 0;
     }
   }
   &__social{
@@ -55,7 +70,13 @@
       margin-right: 0;
     }
     &:hover{
-
+      transform: scale(1.2);
     }
+  }
+  &__copy-logo{
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $blue;
   }
 }

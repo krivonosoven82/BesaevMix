@@ -6,4 +6,11 @@ $(document).ready(function(){
   $('#exit').click(function(){
     $('.modal').removeClass('modal--active');
   });
+//----------not-scroll------
+  $('#connect').click(function (event) {
+   $("body").css("overflow","hidden");
+ });
+ $('#exit').click(function (event) {
+   $("body").css("overflow","auto");
+ });
 });
