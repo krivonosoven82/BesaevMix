@@ -78,7 +78,7 @@ gulp.task('js', () => {
 gulp.task('php', () => {
   gulp.src('./src/php/**/*.php')
     .pipe(newer('./build/'))
-    .pipe(gulp.dest('./build'))
+    .pipe(gulp.dest('./build/php'))
     .pipe(reload({ stream: true }));
 });
 

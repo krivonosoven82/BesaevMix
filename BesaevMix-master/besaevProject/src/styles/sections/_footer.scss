@@ -48,6 +48,9 @@
     @media(max-width: 1000px){
       margin: 0 0 15px 0;
       font-size: 30px;
+      @media(max-width: 390px){
+        font-size: 22px;
+      }
     }
   }
   &__description{
