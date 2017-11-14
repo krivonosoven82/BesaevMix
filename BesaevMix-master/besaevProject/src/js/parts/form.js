@@ -11,16 +11,4 @@ $(document).ready(function () {
   		});
   		return false;
   	});
-  //----------modal-form----------
-  $("#modal-form").submit(function() {
-  $.ajax({
-    type: "POST",
-    url: "php/modal-form.php",
-    data: $(this).serialize()
-  }).done(function() {
-    alert('Thank you!');
-  });
-  return false;
-});
-
 });

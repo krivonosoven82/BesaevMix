@@ -28,6 +28,7 @@
         }
     }
     &--right{
+      justify-content: flex-end;
     @media(max-width: 1000px){
       justify-content: center;
       align-items: center;
@@ -76,7 +77,11 @@
       transform: scale(1.2);
     }
   }
+  &__copy{
+    color: $whiteOpacity;
+  }
   &__copy-logo{
+    padding-left: 5px;
     font-size: 16px;
     color: $blue;
   }

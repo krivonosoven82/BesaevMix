@@ -7,9 +7,6 @@ body {
   color: $base-text-color;
   line-height: 1;
   overflow-x: hidden;
-  background: url(../img/bg-contact.jpg) no-repeat;
-  background-size: 100% 100%;
-  background-attachment: fixed;
   &.hidden {
       overflow: hidden;
   }
@@ -23,12 +20,10 @@ input {
       required: invalid;
   }
 }
-
 textarea {
   required: valid;
   outline: none;
   @include transition(0.5s);
-  //color: $base-text-color;
   &:focus {
     required: invalid;
   }
@@ -101,7 +96,7 @@ li {
 //----------.wrap---------------------------------------------------------------
   .wrap{
     width: 100%;
-    max-width: 1366px;
+    //max-width: 1366px;
     min-height: 100%;
     margin: 0 auto;
     padding: 60px 15px;
@@ -109,31 +104,27 @@ li {
       padding: 40px 15px;
     }
   }
-
 //----------title---------------------------------------------------------------
   .title{
     text-align: center;
     font-family: 'Open Sans';
     font-weight: 700;
-    font-size: 48px;
+    font-size: 42px;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     color: $yellow;
     text-shadow: 1px 1px 1px $black;
     margin-bottom: 60px;
-    &--color{
-      color: $white;
+    &--contact{
+      margin-bottom: 30px;
     }
-    @media(max-width: 1024px){
-      // margin-bottom: 60px;
-      @media(max-width: 920px){
+    @media(max-width: 850px){
+       margin-bottom: 30px;
+      @media(max-width: 575px){
         font-size: 42px;
-        // margin-bottom: 20px;
         @media(max-width: 380px){
           font-size: 36px;
-          // margin-bottom: 30px;
         }
       }
     }
-
   }

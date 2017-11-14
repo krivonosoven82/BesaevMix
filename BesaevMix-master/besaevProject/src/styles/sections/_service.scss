@@ -1,14 +1,15 @@
 .service{
-  background-color: $whiteOpacity;
+  background: url(../img/bg2.jpg) no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
   &__wrap{
-    //background-color: $whiteOpacity;
+      background-color: $blackOverlay;
   }
   &__price-list{
     width: 100%;
     max-width: 1100px;
     margin: 0 auto;
     padding: 25px 15px;
-    background-color: $blackOverlay;
     border-radius: 4px;
   }
   &__container{
