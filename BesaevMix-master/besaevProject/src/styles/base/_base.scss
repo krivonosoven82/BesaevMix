@@ -99,6 +99,10 @@ li {
     min-height: 100%;
     margin: 0 auto;
     padding: 60px 15px;
+    @media(max-width: 900){
+      padding-bottom: 0;
+    }
+
   }
 //----------title---------------------------------------------------------------
   .title{
