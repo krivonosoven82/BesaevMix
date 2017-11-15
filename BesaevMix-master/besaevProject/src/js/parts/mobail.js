@@ -21,9 +21,9 @@ $(document).ready(function(){
     $(this).addClass('mobail__item--active');
   });
 
-  //----------scroll mobail------
+  // //----------scroll mobail------
   if ($('#mobail-scroll').length) {
-    let scrollTrigger = 100, // px
+    let scrollTrigger = -1, // px
       backToTop = function () {
         let scrollTop = $(window).scrollTop();
         if (scrollTop > scrollTrigger) {
